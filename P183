@@ -1,0 +1,76 @@
+From react:
+○ React, Component
+● Form react-native:
+Image, View
+StyleSheet:
+● Upper Container: App Name
+● Middle Container: Camera Section
+● Lower container: Top and Bottom Lower Containers
+Filters images Container
+{
+face: {
+bounds: {
+size: { width: faceWidth, height: faceHeight }
+},
+leftEyePosition,
+rightEyePosition,
+noseBasePosition
+}
+const Filter1 = ({
+    face: {
+        bounds: {
+            size: { width: faceWidth, height: faceHeight }
+        },
+ const transformAngle = (
+From react:
+○ React, Component
+● Form react-native:
+○ StyleSheet, Text, View, SafeAreaView, Platform, Image, ScrollView,
+TouchableOpacity
+
+● From react-native-responsive-fontzie:
+○ RFPercentage, RFValue
+● From expo-camera:
+○ Camera
+● From expo-face-detector:
+○ FaceDetector
+● From expo-status-bar:
+○ StatusBar
+ [
+{ id: “imageFilter_id_1”, src: “./assets/imageFilter1.png”},
+{ id: “imageFilter_id_2”, src: “./assets/imageFilter2.png”},
+{ id: “imageFilter_id_3”, src: “./assets/imageFilter3.png”},
+{ id: “imageFilter_id_4”, src: “./assets/imageFilter4.png”},
+constructor:
+○ Take a state object variable with:
+hasCameraPermission : null
+■ faces : []
+■ current_filter : “imageFilter_id_1”
+componentDidMount() {
+        Permissions
+            .askAsync(Permissions.CAMERA)
+            .then(this.onCameraPermission)
+    }
+onFacesDetected({ faces }) {
+        this.setState({ faces: faces })
+    }
+ render() {
+        const { hasCameraPermission } = this.state;
+        if (hasCameraPermission === null) {
+            return <View />
+        }
+        if (hasCameraPermission === false) {
+            return (
+                <View style={styles.container}>
+                    <Text>No access to camera</Text>
+                </View>
+            )
+        }
+  import React from 'react';
+import Main from "./screens/Main";
+
+export default function App() {
+  return (
+    <Main />
+  )
+}      
